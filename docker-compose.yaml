@@ -1,0 +1,9 @@
+version: '2'
+services:
+  mosquitto:
+    build: .
+    ports:
+      - "10003:8883"
+    volumes:
+      - ${MOSQUITTO_CONFIG_DIR}:/config/
+    restart: always
