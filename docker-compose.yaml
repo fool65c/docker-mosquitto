@@ -4,6 +4,7 @@ services:
     build: .
     ports:
       - "10003:8883"
+      - "10003:8883/udp"
     volumes:
       - ${MOSQUITTO_CONFIG_DIR}:/config/
     restart: always
